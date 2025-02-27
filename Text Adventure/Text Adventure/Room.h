@@ -7,9 +7,9 @@ using namespace std;
 class Room
 {
 private:
-	string roomdescription = "";
+	string description = "";
 public:
-	void RoomDesc() const;
+	void Description() const;
 
 	Room();
 	Room(string newDesc, Item* newItem);
@@ -17,5 +17,6 @@ public:
 
 	Item* item;
 
+	void SetDescription(string);
 	void UpdateDescription();
 };

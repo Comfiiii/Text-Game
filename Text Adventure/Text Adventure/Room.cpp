@@ -1,8 +1,8 @@
 #include "Room.h"
 
-void Room::RoomDesc() const
+void Room::Description() const
 {
-	cout << roomdescription;
+	cout << description;
 	if (item != nullptr)
 	{
 	item->ItemDesc();
@@ -16,13 +16,18 @@ Room::Room()
 
 Room::Room(string newDesc, Item* newItem)
 {
-	roomdescription = newDesc;
+	description = newDesc;
 	item = newItem;
 }
 
 Room::~Room()
 {
 
+}
+
+void Room::SetDescription(string desc)
+{
+	description = desc;
 }
 
 void Room::UpdateDescription()
@@ -35,5 +40,5 @@ void Room::UpdateDescription()
 	{"-------------------------------------------------------\nThe room appears to be empty..\n"},
 	};
 
-	roomdescription = EmptyRandomiser[rand()%4];
+	description = EmptyRandomiser[rand()%4];
 }
