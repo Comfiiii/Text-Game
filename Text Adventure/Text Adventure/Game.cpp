@@ -21,7 +21,6 @@ Game::Game()
 	};
 
 	roomarray[0][0].SetDescription("-------------------------------------------------------\nYou have found yourself alone in a dark room... where would you like to go?\nUse w to move up a room\nUse s to move down a room\nUse a to move left a room\nUse d to move right a room\nUse 'Inspect' to inspect your weapon..\n");
-
 	
 	roomarray[0][3].SetDescription(EmptyRandomiser[rand() % 4]);
 	roomarray[1][0].SetDescription(EmptyRandomiser[rand() % 4]);
@@ -64,22 +63,24 @@ void Game::Run()
 
 	while (gameplay == true)
 	{
+
 		RoomCheck();
-		Input.clear();
-		getline(cin, Input);
-		system("cls");
-		RecieveInput(Input);
 		DisplayText();
 		cout << "-------------------------------------------------------\n";
 		cout << "What do you do now:\nInspect Item (Inspect)\nMove Room (w,a,s,d)\n";
+		getline(cin, Input);
 		HasMoved = false;
+		system("cls");
+		RecieveInput(Input);
+		Input.clear();
 	}
 	
-
 	if (gameplay == false)
 	{
 		system("cls");
 	}
+
+	
 }
 
 void Game::RecieveInput(string Input)
@@ -146,16 +147,15 @@ void Game::RecieveInput(string Input)
 
 	else if (Input == "inspect" || Input == "Inspect")
 	{
-		cout << "-------------------------------------------------------\n";
-		cout << "Feature not yet implemented..\n";
+	cout << "-------------------------------------------------------\n";
+	cout << "Feature not yet implemented..\n";
 	}
 
-	else 
+	else
 	{
-		cout << "-------------------------------------------------------\n";
-		cout << "Invalid input.\n";
+	cout << "-------------------------------------------------------\n";
+	cout << "Invalid input.\n";
 	}
-
 	
 }
 

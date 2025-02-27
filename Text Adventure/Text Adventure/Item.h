@@ -7,7 +7,7 @@ class Item
 private:
 	string itemdescription;
 public:
-	void ItemDesc() const;
+	void Description() const;
 	void Use();
 
 	Item();

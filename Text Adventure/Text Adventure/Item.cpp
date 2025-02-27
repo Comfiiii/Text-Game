@@ -1,6 +1,6 @@
 #include "Item.h"
 
-void Item::ItemDesc() const
+void Item::Description() const
 {
 	cout << itemdescription;
 }

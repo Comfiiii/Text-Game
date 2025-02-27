@@ -11,7 +11,7 @@ int main()
 
 	cout << "-------------------------------------------------------\n";
 	cout << "Welcome to My Text Adventure!\nWould you like to play?\ny = yes   n = no\n";
-	cin >> Input;
+	getline(cin, Input);
 
 	while (Input != "y" && Input != "n")
 	{

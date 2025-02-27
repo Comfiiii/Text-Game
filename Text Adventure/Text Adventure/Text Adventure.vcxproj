@@ -137,8 +137,11 @@
     <ClInclude Include="Armor.h" />
     <ClInclude Include="BetterArmor.h" />
     <ClInclude Include="BetterSword.h" />
+    <ClInclude Include="BoxOfDonuts.h" />
+    <ClInclude Include="Cat.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Lamp.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="Sword.h" />

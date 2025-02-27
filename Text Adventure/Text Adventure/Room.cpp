@@ -5,7 +5,7 @@ void Room::Description() const
 	cout << description;
 	if (item != nullptr)
 	{
-	item->ItemDesc();
+	item->Description();
 	}
 }
 

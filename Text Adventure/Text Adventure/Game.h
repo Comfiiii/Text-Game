@@ -42,7 +42,7 @@ public:
 	bool gameplay = false;
 	Vec2 PlayerLocation = { 1,1 };
 
-	bool HasMoved = false;
+	bool HasMoved = true;
 
 	Game();
 	~Game();
