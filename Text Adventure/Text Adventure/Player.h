@@ -2,16 +2,29 @@
 #include <iostream>
 #include <string>
 #include <list>
-using namespace std;
 
 class Player
 {
 private:
-	list <string> spells;
+	
+	std::string spells[10] =
+	{
+	{"Eclipse"},
+	{"Eruption"},
+	{"Frostbite"},
+	{"Levitate"},
+	{"Mirage"},
+	{"Petrify"},
+	{"Polymorph"},
+	{"Teleport"},
+	{"Thunderwave"},
+	{"Vortex"},
+	};
+
 public:
 
 	Player();
 	~Player();
-	bool FindSpell(string spell);
+	bool FindSpell(std::string spell);
 
 };

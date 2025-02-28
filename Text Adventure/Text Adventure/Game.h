@@ -3,7 +3,10 @@
 #include <string>
 #include "Room.h"
 #include "Player.h"
-using namespace std;
+#include "Cat.h"
+#include "BoxOfDonuts.h"
+#include "Lamp.h"
+#include "Item.h"
 
 struct Vec2
 {
@@ -43,12 +46,13 @@ public:
 	Vec2 PlayerLocation = { 1,1 };
 
 	bool HasMoved = true;
+	
 
 	Game();
 	~Game();
 	void Run();
 
-	void RecieveInput(string Input);
+	void RecieveInput(std::string Input);
 	void DisplayText();
 	void RoomCheck();
 };

@@ -4,7 +4,7 @@
 class BoxOfDonuts : public Item
 {
 private:
-	int count = 12;
+	unsigned int count = 4294967296;
 public:
 	BoxOfDonuts();
 	~BoxOfDonuts();
@@ -12,23 +12,5 @@ public:
 	void Use();
 };
 
-BoxOfDonuts::BoxOfDonuts()
-{
 
-}
-
-BoxOfDonuts::~BoxOfDonuts()
-{
-
-}
-
-const void BoxOfDonuts::Description()
-{
-
-}
-
-void BoxOfDonuts::Use()
-{
-
-}
 

@@ -4,7 +4,7 @@
 class Cat : public Item
 {
 private:
-	bool turnedOn = false;
+	bool purring = false;
 public:
 	Cat();
 	~Cat();
@@ -12,23 +12,5 @@ public:
 	void Use();
 };
 
-Cat::Cat()
-{
 
-}
-
-Cat::~Cat()
-{
-
-}
-
-const void Cat::Description()
-{
-
-}
-
-void Cat::Use()
-{
-	
-}
 

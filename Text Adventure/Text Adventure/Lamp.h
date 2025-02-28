@@ -12,23 +12,4 @@ public:
 	void Use();
 };
 
-Lamp::Lamp()
-{
-
-}
-
-Lamp::~Lamp()
-{
-
-}
-
-const void Lamp::Description()
-{
-
-}
-
-void Lamp::Use()
-{
-
-}
 

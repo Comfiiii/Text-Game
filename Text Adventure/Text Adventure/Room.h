@@ -2,21 +2,20 @@
 #include <iostream>
 #include <string>
 #include "Item.h"
-using namespace std;
 
 class Room
 {
 private:
-	string description = "";
+	std::string description = "";
 public:
 	void Description() const;
 
 	Room();
-	Room(string newDesc, Item* newItem);
+	Room(std::string newDesc, Item* newItem);
 	~Room();
 
 	Item* item;
 
-	void SetDescription(string);
+	void SetDescription(std::string);
 	void UpdateDescription();
 };

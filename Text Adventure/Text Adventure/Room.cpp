@@ -2,7 +2,7 @@
 
 void Room::Description() const
 {
-	cout << description;
+	std::cout << description;
 	if (item != nullptr)
 	{
 	item->Description();
@@ -14,7 +14,7 @@ Room::Room()
 
 }
 
-Room::Room(string newDesc, Item* newItem)
+Room::Room(std::string newDesc, Item* newItem)
 {
 	description = newDesc;
 	item = newItem;
@@ -25,14 +25,14 @@ Room::~Room()
 
 }
 
-void Room::SetDescription(string desc)
+void Room::SetDescription(std::string desc)
 {
 	description = desc;
 }
 
 void Room::UpdateDescription()
 {
-	string EmptyRandomiser[4] =
+	std::string EmptyRandomiser[4] =
 	{
 	{"-------------------------------------------------------\nThis room is empty..\nWhere would you like to go now?\n"},
 	{"-------------------------------------------------------\nThe room is to dark to see anything..\nYou feel around but find nothing.\n"},

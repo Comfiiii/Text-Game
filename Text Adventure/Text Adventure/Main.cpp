@@ -7,20 +7,20 @@ int main()
 	srand(time(0));
 
 	Game* TextAdventure = new Game();
-	string Input;
+	std::string Input;
 
-	cout << "-------------------------------------------------------\n";
-	cout << "Welcome to My Text Adventure!\nWould you like to play?\ny = yes   n = no\n";
-	getline(cin, Input);
+	std::cout << "-------------------------------------------------------\n";
+	std::cout << "Welcome to My Text Adventure!\nWould you like to play?\ny = yes   n = no\n";
+	getline(std::cin, Input);
 
 	while (Input != "y" && Input != "n")
 	{
 		system("cls");
-		cout << "-------------------------------------------------------\n";
-		cout << "Welcome to My Text Adventure!\nWould you like to play?\ny = yes   n = no\n";
-		cout << "Invalid Input, Please use y/n.\n";
+		std::cout << "-------------------------------------------------------\n";
+		std::cout << "Welcome to My Text Adventure!\nWould you like to play?\ny = yes   n = no\n";
+		std::cout << "Invalid Input, Please use y/n.\n";
 		Input.clear();
-		cin >> Input;
+		std::cin >> Input;
 	}
 
 	if (Input == "y")

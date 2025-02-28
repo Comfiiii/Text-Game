@@ -2,7 +2,7 @@
 
 void Item::Description() const
 {
-	cout << itemdescription;
+	std::cout << itemdescription;
 }
 
 void Item::Use()
