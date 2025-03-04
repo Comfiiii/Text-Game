@@ -31,7 +31,7 @@ private:
 	{0, 0, 0, 0, 0, 0, 0, 0, 0},
 	};
 
-	Room roomarray[5][7];
+	Room rooms[5][7];
 
 	Player* player;
 

@@ -8,8 +8,8 @@ private:
 public:
 	Cat();
 	~Cat();
-	const void Description();
-	void Use();
+	void Description() const override;
+	void Use() override;
 };
 
 

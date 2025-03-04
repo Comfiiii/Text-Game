@@ -8,8 +8,8 @@ private:
 public:
 	Lamp();
 	~Lamp();
-	const void Description();
-	void Use();
+	void Description() const override;
+	void Use() override;
 };
 
 

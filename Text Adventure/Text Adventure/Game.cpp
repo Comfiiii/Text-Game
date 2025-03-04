@@ -8,9 +8,9 @@ Game::Game()
 	player = new Player;
 
 	// Allocate objects to rooms 
-	roomarray[2][0].item = cat; 
-	roomarray[0][3].item = boxofdonuts;
-	roomarray[2][4].item = lamp;
+	rooms[2][0].item = cat; 
+	rooms[0][3].item = boxofdonuts;
+	rooms[2][4].item = lamp;
 
 	std::string EnemyRandomiser[4] =
 	{
@@ -28,35 +28,35 @@ Game::Game()
 	{"-------------------------------------------------------\nThe room appears to be empty..\n"},
 	};
 
-	roomarray[0][0].SetDescription("-------------------------------------------------------\nYou have found yourself alone in a dark room... where would you like to go?\nUse w to move up a room\nUse s to move down a room\nUse a to move left a room\nUse d to move right a room\nUse 'Inspect' to inspect your weapon..\n");
+	rooms[0][0].SetDescription("-------------------------------------------------------\nYou have found yourself alone in a dark room... where would you like to go?\nUse w to move up a room\nUse s to move down a room\nUse a to move left a room\nUse d to move right a room\nUse 'Inspect' to inspect your weapon..\n");
 	
-	roomarray[0][3].SetDescription("-------------------------------------------------------\nThere is a seemingly endless box of donuts in here... do you want to eat one? if so type 'eat donut'\n");
-	roomarray[1][0].SetDescription(EmptyRandomiser[rand() % 4]);
-	roomarray[2][0].SetDescription("-------------------------------------------------------\nThere is a cat in here, type 'pet cat' to pet it\n");
-	roomarray[2][2].SetDescription(EmptyRandomiser[rand() % 4]);
-	roomarray[2][4].SetDescription("-------------------------------------------------------\nThere is a lamp in here, turn it on? if yes type 'turn on\n");
-	roomarray[3][1].SetDescription(EmptyRandomiser[rand() % 4]);
-	roomarray[3][4].SetDescription(EmptyRandomiser[rand() % 4]);
-	roomarray[3][5].SetDescription(EmptyRandomiser[rand() % 4]);
+	rooms[0][3].SetDescription("-------------------------------------------------------\nThere is a seemingly endless box of donuts in here... do you want to eat one? if so type 'eat donut'\n");
+	rooms[1][0].SetDescription(EmptyRandomiser[rand() % 4]);
+	rooms[2][0].SetDescription("-------------------------------------------------------\nThere is a cat in here, type 'pet cat' to pet it\n");
+	rooms[2][2].SetDescription(EmptyRandomiser[rand() % 4]);
+	rooms[2][4].SetDescription("-------------------------------------------------------\nThere is a lamp in here, turn it on? if yes type 'turn on\n");
+	rooms[3][1].SetDescription(EmptyRandomiser[rand() % 4]);
+	rooms[3][4].SetDescription(EmptyRandomiser[rand() % 4]);
+	rooms[3][5].SetDescription(EmptyRandomiser[rand() % 4]);
 
-	roomarray[0][2].SetDescription(EnemyRandomiser[rand() % 4]);
-	roomarray[0][4].SetDescription(EnemyRandomiser[rand() % 4]);
-	roomarray[1][2].SetDescription(EnemyRandomiser[rand() % 4]);
-	roomarray[2][3].SetDescription(EnemyRandomiser[rand() % 4]);
-	roomarray[2][5].SetDescription(EnemyRandomiser[rand() % 4]);
-	roomarray[3][0].SetDescription(EnemyRandomiser[rand() % 4]);
-	roomarray[3][2].SetDescription(EnemyRandomiser[rand() % 4]);
-	roomarray[4][4].SetDescription(EnemyRandomiser[rand() % 4]);
+	rooms[0][2].SetDescription(EnemyRandomiser[rand() % 4]);
+	rooms[0][4].SetDescription(EnemyRandomiser[rand() % 4]);
+	rooms[1][2].SetDescription(EnemyRandomiser[rand() % 4]);
+	rooms[2][3].SetDescription(EnemyRandomiser[rand() % 4]);
+	rooms[2][5].SetDescription(EnemyRandomiser[rand() % 4]);
+	rooms[3][0].SetDescription(EnemyRandomiser[rand() % 4]);
+	rooms[3][2].SetDescription(EnemyRandomiser[rand() % 4]);
+	rooms[4][4].SetDescription(EnemyRandomiser[rand() % 4]);
 
-	roomarray[4][0].SetDescription("-------------------------------------------------------\nYou run into a MiniBoss!\nYou fight hard and manage to slay it..\nIt drops a piece of armor that you equip.\n");
+	rooms[4][0].SetDescription("-------------------------------------------------------\nYou run into a MiniBoss!\nYou fight hard and manage to slay it..\nIt drops a piece of armor that you equip.\n");
 
-	roomarray[4][2].SetDescription("-------------------------------------------------------\nYou feel your power surging and a light emitting from the room..\nIn the middle is a shiny sword in a stone!\nYou walk towards it and yank it out!\nYou feel you could kill anything, even a boss!\n");
+	rooms[4][2].SetDescription("-------------------------------------------------------\nYou feel your power surging and a light emitting from the room..\nIn the middle is a shiny sword in a stone!\nYou walk towards it and yank it out!\nYou feel you could kill anything, even a boss!\n");
 
-	roomarray[3][6].SetDescription("");
+	rooms[3][6].SetDescription("");
 
-	roomarray[1][5].SetDescription("-------------------------------------------------------\nYou run into a horde of enemies!\nIts a tough fight but with your sturdy sword and armor, you manage to kill them all..\nYou find a new shiny set of armor that you swap your old set with..\nYou feel a lot stronger now..\n");
+	rooms[1][5].SetDescription("-------------------------------------------------------\nYou run into a horde of enemies!\nIts a tough fight but with your sturdy sword and armor, you manage to kill them all..\nYou find a new shiny set of armor that you swap your old set with..\nYou feel a lot stronger now..\n");
 
-	roomarray[0][1].SetDescription("-------------------------------------------------------\nYou see a rusty sword on the ground..you pick it up and put it in your inventory.\nYou think to yourself, Maybe I can kill enemies to find my way out..\n");
+	rooms[0][1].SetDescription("-------------------------------------------------------\nYou see a rusty sword on the ground..you pick it up and put it in your inventory.\nYou think to yourself, Maybe I can kill enemies to find my way out..\n");
 
 }
 
@@ -167,17 +167,17 @@ void Game::RecieveInput(std::string Input)
 
 	else if (Input == "pet cat" && (PlayerLocation.x == 3 && PlayerLocation.y == 1)) 
 	{
-		roomarray[2][0].item->Use();
+		rooms[2][0].item->Use();
 	}
 
 	else if (Input == "eat donut" && PlayerLocation.x == 1 && PlayerLocation.y == 4)
 	{
-		roomarray[0][3].item->Use();
+		rooms[0][3].item->Use();
 	}
 
 	else if (Input == "turn on" && (PlayerLocation.x == 3 && PlayerLocation.y == 5))
 	{
-		roomarray[2][4].item->Use();
+		rooms[2][4].item->Use();
 	}
 
 	else if (Input == "spells")
@@ -206,11 +206,11 @@ void Game::RecieveInput(std::string Input)
 
 void Game::DisplayText()
 {
-	roomarray[PlayerLocation.x - 1][PlayerLocation.y - 1].Description();
+	rooms[PlayerLocation.x - 1][PlayerLocation.y - 1].Description();
 
 	if (HasMoved)
 	{
-		roomarray[PlayerLocation.x - 1][PlayerLocation.y - 1].UpdateDescription();
+		rooms[PlayerLocation.x - 1][PlayerLocation.y - 1].UpdateDescription();
 	}
 	
 }

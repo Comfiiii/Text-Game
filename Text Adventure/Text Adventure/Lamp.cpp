@@ -11,7 +11,7 @@ Lamp::~Lamp()
 
 }
 
-const void Lamp::Description()
+void Lamp::Description() const
 {
 	std::cout << "This is a Lamp\n";
 }
