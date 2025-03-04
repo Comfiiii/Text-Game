@@ -8,8 +8,8 @@ private:
 public:
 	BoxOfDonuts();
 	~BoxOfDonuts();
-	const void Description();
-	void Use();
+	void Description() const override;
+	void Use() override;
 };
 
 

@@ -11,7 +11,7 @@ BoxOfDonuts::~BoxOfDonuts()
 
 }
 
-const void BoxOfDonuts::Description()
+void BoxOfDonuts::Description() const
 {
 	std::cout << "This is a BoxOfDonuts\n";
 }

@@ -11,7 +11,7 @@ Cat::~Cat()
 
 }
 
-const void Cat::Description()
+void Cat::Description() const
 {
 	std::cout << "This is a cat\n";
 }
